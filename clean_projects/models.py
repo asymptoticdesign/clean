@@ -16,7 +16,7 @@ class Project(models.Model):
 
     class Meta:
         ordering = ['-created_date']
-    
+
     def __str__(self):
         return self.title
 
@@ -25,6 +25,7 @@ class Project(models.Model):
 
 class Sketch(models.Model):
     project = models.ForeignKey('Project')
+    slug = models.SlugField()
     created_date = models.DateField(default=datetime.datetime.now)
     author = models.ForeignKey(User)
 
@@ -33,12 +34,12 @@ class Sketch(models.Model):
 
     class Meta:
         ordering = ['-created_date']
-    
+
     def __str__(self):
-        return self.author + ' ' + self.project
+        return self.slug
 
     def get_absolute_url(self):
-        return "/projects/%s/%s/" % (self.project.slug, self.author)
+        return "/projects/%s/" % self.slug
 
 class Subject(models.Model):
     title = models.CharField(max_length=250,help_text="Maximum 250 characters")
