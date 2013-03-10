@@ -1,17 +1,9 @@
 from clean_projects.models import Sketch, Project, Subject
 from django.conf.urls.defaults import patterns, include, url
-from django.views.generic import TemplateView
+from django.views.generic import *
 from django.contrib import admin
 
 admin.autodiscover()
-
-projects_dict = {
-    'queryset' : Project.objects.all()
-    }
-
-sketch_dict = {
-    'queryset' : Sketch.objects.all()
-    }
 
 urlpatterns = patterns('',
     # Examples:
@@ -27,7 +19,8 @@ urlpatterns = patterns('',
     url(r'^index/$', TemplateView.as_view(template_name="base.html")),
     url(r'^about/$', TemplateView.as_view(template_name="about.html")),
     url(r'^browse/$', TemplateView.as_view(template_name="browse.html")),
-    url(r'^projects/$','django.views.generic.list_detail.object_list', dict(projects_dict, template_name="projects.html")),
+    url(r'^projects/$',ListView.as_view(queryset=Project.objects.all(),template_name="projects.html")),
+#    url(r'^projects/$','django.views.generic.list_detail.object_list', dict(projects_dict, template_name="projects.html")),
 #    url(r'^projects/(?P<slug>[-\w]+)/$', 'django.views.generic.list_detail.object_detail', dict(sketch_dict, project=, template_name="project_detail.html"))
 #    url('^sketches/(?P<id_no>[-\w]+)/$', 'django.views.generic.list_detail.object_detail', dict(sketch_dict, id_no='id_no'
 )
