@@ -3,14 +3,40 @@ body {
     font-family: Tahoma, Arial, sans-serif;
     color: #383838;
     background: #fff;
+    margin: 0 auto 1em;
+    width: 700px;
 }
 img.logo{
 	border: 1px;
 	border-radius: 10px 10px 10px 10px;
-	border-style: solid;
+	border-style: inset;
 	width: 100px;
 	padding: 0px 10px 0px 10px;
 	margin: 2%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+	float: left;
+}
+
+nav a:link, nav a:visited {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-decoration: none;
+    width: 146px;
+    letter-spacing: 2px;
+}
+nav a:hover {
+    color: #555;
 }
 
 h1 {
@@ -23,12 +49,10 @@ h3 {
 }
 article {
     border-radius: 15px 15px 15px 15px;
-    text-align: center;
-    border: 1px;
+    border: 0px;
     border-style: dashed;
     border-color: #065780;
     padding: 1em;
-    background: #E3E5E8;
 }
 a:link {
     text-decoration: none;
@@ -42,6 +66,32 @@ a:visited {
     text-decoration: none;
     color: #0B557A;
 }
+
+ul.project {
+	text-align: center;
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.project li {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border-radius: 15px 15px 15px 15px;
+    text-align: center;
+    border: 1px;
+    border-style: dashed;
+    border-color: #065780;
+    padding: 3em;
+    margin: 2px;
+    background: #8A8F91;
+}
+
+.projectpage p{
+	text-color: #ff0000;
+}
+
 .important {
     color: #BAD0F7;
     background: #8A8F91;
@@ -54,13 +104,16 @@ a:visited {
     text-align: center;
 }
 .spaceholder{
-    border-radius: 15px 15px 15px 15px;
-    text-align: center;
-    border: 1px;
-    border-style: dashed;
-    border-color: #065780;
-    padding: 3em;
-    background: #8A8F91;
-    width: 30%;
+	height: 100px;
+}
+
+footer {
+    background-color: #555;
+    border-radius: 8px 8px 8px 8px;
+    color: #C0C0CA;
+    font-family: Tahoma;
+    font-size: smaller;
+    padding: 0.2em 2em 0.2em 2em;
     margin: auto;
+    clear: both;
 }
