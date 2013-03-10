@@ -5,7 +5,7 @@
 {% block content %}
 
 <h1>Sketch #{{ object.id_no }} in project <span id="projectname">{{ object.project }}</span></h1>
-<h2>created by {{ object.author }} on {{ object.created_date }}</h2>
+<span class="byline">created by <span id="owner">{{ object.author }}</span> on {{ object.created_date }}</span>
 
 
 <h1> {{ object.title }} </h1>
