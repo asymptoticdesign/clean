@@ -186,6 +186,19 @@ ul.projectpage {
     background: #8A8F91;
 }
 
+img.sparkle{
+	float: left;
+	border: 1px;
+	border-radius: 10px 10px 10px 10px;
+	border-style: inset;
+	padding: 1px;
+	height: 100px;
+}
+
+.sparkle{
+	font-size: 10pt;
+}
+
 footer {
     background-color: #555;
     border-radius: 8px 8px 8px 8px;

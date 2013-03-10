@@ -6,7 +6,11 @@
 <h2>created by {{ object.author }} on {{ object.created.date }}</h2>
 
 	<div id="sketch">
-		<li>sketch goes here</li>
+	<ul>
+		<li>{{ object.content }}</li>
+	</ul>
 	</div>
-
+<div class="sparkle">
+	<img src="{{STATIC_URL}}/media/blue_sparkle.png">{{object.sparkles}}
+</div>
 {% endblock %}
