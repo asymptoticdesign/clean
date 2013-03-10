@@ -223,11 +223,13 @@ img.sparkle{
 	border-style: inset;
 	padding: 1px;
 	height: 20px;
+	margin: 5px;
 }
 
 .sparkle{
 	clear: both;
 	font-size: 10pt;
+	margin-top: 10px;
 }
 
 .jsfiddle{
@@ -241,7 +243,7 @@ img.sparkle{
 #code {
 	width: 400px;
 	height: 400px;
-	margin: auto;
+	margin: auto auto 10px 20px;
 }
 
 #output {
