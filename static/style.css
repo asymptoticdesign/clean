@@ -69,6 +69,11 @@ h3 {
 	margin-top:0;
 }
 
+.blue{
+	color: #063380;
+	font-weight: bold;
+}
+
 article {
     border-radius: 15px 15px 15px 15px;
     border: 0px;
