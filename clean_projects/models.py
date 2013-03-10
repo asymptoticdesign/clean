@@ -16,6 +16,7 @@ class Project(models.Model):
 
     title = models.CharField(max_length=512)
     slug = models.SlugField(unique=True,help_text="Suggested slug value.  Must be unique.")
+    #manager = models.ForeignKey(User)
     created_date = models.DateField(default=datetime.datetime.now)
     subject = models.ForeignKey('Subject')
     tags = TagField()
@@ -34,6 +35,8 @@ class Project(models.Model):
         return "/projects/%s/" % self.slug
 
 class Sketch(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True)
     id_no = models.AutoField(primary_key=True)
     project = models.ForeignKey('Project')
     created_date = models.DateField(default=datetime.datetime.now)
@@ -45,8 +48,11 @@ class Sketch(models.Model):
     class Meta:
         ordering = ['-created_date']
 
+    def __str__(self):
+        return self.title
+
     def get_absolute_url(self):
-        return "/projects/sketches/%s/" % self.id_no
+        return "/projects/sketches/%s/" % self.slug
 
 class Subject(models.Model):
     title = models.CharField(max_length=250,help_text="Maximum 250 characters")
