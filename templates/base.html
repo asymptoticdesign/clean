@@ -7,36 +7,37 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-		<title>HTML</title>
+		<title>clean.</title>
 		<meta name="description" content="" />
-		<meta name="author" content="Edge of Forever Studios" />
+		<meta name="author" content="Rachel Boyce & Nathan Lachenmyer" />
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}style.css">
+		<link rel="shortcut icon" href="{{STATIC_URL}}/media/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}/style.css">
 	</head>
-
 	<body>
-    <h1>Header one</h1>
-    <h2>Header two</h2>
-    <h3>Headr three</h3>
-    <article>Here's an article</article>
-    Body Text Body Text Body Text
-    Body Text.
-    <a href = "http://www.google.com">Google.com</a>
-    <div class="important">This is something Important</div>
-    <p class="center">This is a centered paragraph</p>
-    <div class="spaceholder">Recent Project 1</div>
-    <div class="spaceholder">Recent Project 2</div>
-    <div class="spaceholder">Recent Project 3</div>
+		<header>
+			<hgroup>
+				<a href="/"><img class="logo" src="{{STATIC_URL}}/media/clean_logo.png"></a>
+			</hgroup>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/about">About</a></li>
+				<li><a href="/browse">Browse</a></li>
+				<li><a href="/projects">Your Projects</a></li>
+			</ul>
+		</nav>
+	<!-- Begin section that can swap out to other pages -->
+	{% block content %}
+	{% endblock %}
+    <!-- End section -->
 </body>
 
 			<footer>
 				<p>
-					&copy; Copyright Edge of Forever Studios 2013
+					&copy; Copyright Rachel Boyce & Nathan Lachenmyer 2013
 				</p>
 			</footer>
 		</div>

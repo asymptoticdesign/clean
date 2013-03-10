@@ -1,5 +1,12 @@
-<h1> Projects </h1>
-<ul>
+{% extends "base.html" %}
+
+{% block content %}
+
+<article>
+	<h1>Python variable for Project title</h1>
+	<h2>PyVar for Project author</h2>
+	<p class="projectpage">
+		<ul>
 {% for project in object_list %}
 <li>
   <a href="{{ project.get_absolute_url }}"><h2>{{ project.title }}</h2></a>
@@ -7,3 +14,7 @@
 </li>
 {% endfor %}
 </ul>
+	</p>
+</article>
+
+{% endblock %}
