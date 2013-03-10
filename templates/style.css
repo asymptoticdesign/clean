@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    width: 30%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.container {
+    background: #e3e3e3;
+}
+
+.output {
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+}
+
+iframe {
+    border: none;
+}

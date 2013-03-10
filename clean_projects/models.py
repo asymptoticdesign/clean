@@ -5,11 +5,21 @@ from tagging.fields import Tag, TagField
 
 # Create your models here.
 class Project(models.Model):
+    JS = 0
+    ART = 1
+    PAPER = 2
+    TYPE = (
+        (JS, 'Javascript'),
+        (ART, 'Art'),
+        (PAPER, 'Humanities Paper')
+    )
+
     title = models.CharField(max_length=512)
     slug = models.SlugField(unique=True,help_text="Suggested slug value.  Must be unique.")
     created_date = models.DateField(default=datetime.datetime.now)
     subject = models.ForeignKey('Subject')
     tags = TagField()
+    project_type = models.IntegerField(choices = TYPE, default=JS)
 
     instructions = models.TextField(help_text="Instructions for the assignment.")
     references = models.TextField(help_text="Enter any references you would like to provide.");
@@ -24,8 +34,8 @@ class Project(models.Model):
         return "/projects/%s/" % self.slug
 
 class Sketch(models.Model):
+    id_no = models.AutoField(primary_key=True)
     project = models.ForeignKey('Project')
-    slug = models.SlugField()
     created_date = models.DateField(default=datetime.datetime.now)
     author = models.ForeignKey(User)
 
@@ -39,7 +49,7 @@ class Sketch(models.Model):
         return self.slug
 
     def get_absolute_url(self):
-        return "/projects/%s/" % self.slug
+        return "/projects/sketches/%s/" % self.id_no
 
 class Subject(models.Model):
     title = models.CharField(max_length=250,help_text="Maximum 250 characters")
