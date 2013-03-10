@@ -1,0 +1,9 @@
+<h1> papers </h1>
+<ul>
+{% for project in object_list %}
+<li>
+  <a href="{{ project.get_absolute_url }}"><h2>{{ project.title }}</h2></a>
+  <p>{{ project.instructions }}</p>
+</li>
+{% endfor %}
+</ul>

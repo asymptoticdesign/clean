@@ -45,9 +45,6 @@ class Sketch(models.Model):
     class Meta:
         ordering = ['-created_date']
 
-    def __str__(self):
-        return self.slug
-
     def get_absolute_url(self):
         return "/projects/sketches/%s/" % self.id_no
 
