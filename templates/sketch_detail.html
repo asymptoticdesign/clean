@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Sketch #{{ object.id_no }} in project {{ object.project }}</h1>
+<h2>created by {{ object.author }} on {{ object.created.date }}</h2>
+
+	<div id="sketch">
+		<li>sketch goes here</li>
+	</div>
+
+{% endblock %}

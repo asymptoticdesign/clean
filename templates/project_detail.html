@@ -1,4 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
 <h1> {{ object.title }} </h1>
+
+organized by <span id="manager">{{ object.manager }}</span>
+
+<h2>Problem statement</h2>
+<div id="instructions">
+	{{ object.instructions }}
+</div>
+
+<h2>Resources</h2>
+<div id="references">
+	{{ object.references }}
+</div>
 
 <h2> Sketches </h2>
 
@@ -9,3 +23,5 @@
 </li>
 {% endfor %}
 </ul>
+
+{% endblock %}
