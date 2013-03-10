@@ -7,56 +7,37 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-		<title>HTML</title>
+		<title>clean.</title>
 		<meta name="description" content="" />
-		<meta name="author" content="Edge of Forever Studios" />
+		<meta name="author" content="Rachel Boyce & Nathan Lachenmyer" />
 
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<link type="text/css" rel="stylesheet" href="../static/style.css">
+		<link rel="shortcut icon" href="{{STATIC_URL}}/media/favicon.ico" />
+		<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}/style.css">
 	</head>
 	<body>
 		<header>
 			<hgroup>
-				<img class="logo" src="../media/clean_logo.png">
+				<a href="/"><img class="logo" src="{{STATIC_URL}}/media/clean_logo.png"></a>
 			</hgroup>
 		</header>
 		<nav>
-			<hr width=80% align="right">
 			<ul>
-				<li><a href="about.html">About</a></li>
-				<li><a href="browse.html">Browse</a></li>
-				<li><a href="projects.html">Your Projects</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/browse">Browse</a></li>
+				<li><a href="/projects">Your Projects</a></li>
 			</ul>
-			<hr width=80% align="left">
 		</nav>
-	<!--- Begin section that can swap out to other pages --->
-	<article>
-		<h1>Welcome to <strong>clean</strong>.</h1>
-		<p>I am a Connective Learning Environment And Network.</p>
-		<p>Explore <strong>clean</strong> projects, or start one for your group.</p>
-	</article>
-	<p class = "center">
-	<ul class="project">
-		<li>Recent Project 1</li>
-		<li>Recent Project 2</li>
-		<li>Recent Project 3</li>
-	</ul></p>
-	<p class="spaceholder">
-	
-	</p>
-	<p>
-		
-	</p>
-    <!--- End section --->
+	<!-- Begin section that can swap out to other pages -->
+	{% block content %}
+	{% endblock %}
+    <!-- End section -->
 </body>
 
 			<footer>
 				<p>
-					&copy; Copyright Edge of Forever Studios 2013
+					&copy; Copyright Rachel Boyce & Nathan Lachenmyer 2013
 				</p>
 			</footer>
 		</div>

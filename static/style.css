@@ -4,7 +4,7 @@ body {
     color: #383838;
     background: #fff;
     margin: 0 auto 1em;
-    width: 700px;
+    width: 900px;
 }
 img.logo{
 	border: 1px;
@@ -43,7 +43,7 @@ h1 {
     color: #063380;
 }
 h2 {
-    color: #068053;
+	color: #063380;
 }
 h3 {
 }
@@ -64,17 +64,15 @@ a:hover {
 }
 a:visited {
     text-decoration: none;
-    color: #0B557A;
+    color: #0C64FA;
 }
 
 ul.project {
-	text-align: center;
-    margin: auto;
     list-style-type: none;
     padding: 0;
 }
 
-.project li {
+ul.project li{
 	float: left;
 	width: 100px;
 	height: 100px;
@@ -86,6 +84,19 @@ ul.project {
     padding: 3em;
     margin: 2px;
     background: #8A8F91;
+}
+
+ul.circle {list-style-type:circle}
+
+p.fakesearch{
+	position: relative;
+	margin-left: 25px;
+	width: 200px;
+	border: 1px;
+	border-style: dashed;
+	border-color: #065780;
+	padding: 0.2em;
+	color: #C0C0CA;
 }
 
 .projectpage p{
@@ -102,6 +113,9 @@ ul.project {
 }
 .center {
     text-align: center;
+    margin-left:auto;
+	margin-right:auto;
+	width=80%;
 }
 .spaceholder{
 	height: 100px;
