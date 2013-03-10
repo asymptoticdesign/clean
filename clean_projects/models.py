@@ -26,7 +26,7 @@ class Project(models.Model):
     references = models.TextField(help_text="Enter any references you would like to provide.");
 
     class Meta:
-        ordering = ['-created_date']
+        ordering = ['-created_date','-title']
 
     def __str__(self):
         return self.title
