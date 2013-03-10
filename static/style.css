@@ -49,15 +49,31 @@ h1 {
 	clear: both;
     color: #063380;
 	font-size: 18pt;
+	padding-top: 10px;
+	margin-bottom: 0px;
 }
 h2 {
 	color: #063380;
 	font-size: 16pt;
 }
+
 h3 {
 	color: #063380;
 	font-size: 14pt;
 }
+
+.byline{
+	clear: both;
+	font: smaller;
+	margin-left: 15px;
+	margin-top:0;
+}
+
+.blue{
+	color: #063380;
+	font-weight: bold;
+}
+
 article {
     border-radius: 15px 15px 15px 15px;
     border: 0px;
@@ -161,7 +177,7 @@ ul.projectpage {
 	font-weight: bold;
 }
 
-#manager {
+#owner {
 	color: #0C64FA;
 	font-weight: bold;
 }
