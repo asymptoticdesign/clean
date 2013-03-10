@@ -34,6 +34,8 @@ class Project(models.Model):
         return "/projects/%s/" % self.slug
 
 class Sketch(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField()
     id_no = models.AutoField(primary_key=True)
     project = models.ForeignKey('Project')
     created_date = models.DateField(default=datetime.datetime.now)
@@ -46,7 +48,7 @@ class Sketch(models.Model):
         ordering = ['-created_date']
 
     def get_absolute_url(self):
-        return "/projects/sketches/%s/" % self.id_no
+        return "/projects/sketches/%s/" % self.slug
 
 class Subject(models.Model):
     title = models.CharField(max_length=250,help_text="Maximum 250 characters")

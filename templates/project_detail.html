@@ -3,7 +3,7 @@
 <h2> Sketches </h2>
 
 <ul>
-{% for sketch in object_list %}
+{% for sketch in object.sketch_set.all %}
 <li>
   <a href="{{ sketch.get_absolute_url }}"><h2>Sketch by {{ sketch.author }}</h2></a>
 </li>
