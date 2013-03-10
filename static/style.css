@@ -47,11 +47,15 @@ nav a:hover {
 h1 {
 	clear: both;
     color: #063380;
+	font-size: 18pt;
 }
 h2 {
 	color: #063380;
+	font-size: 16pt;
 }
 h3 {
+	color: #063380;
+	font-size: 14pt;
 }
 article {
     border-radius: 15px 15px 15px 15px;
@@ -60,17 +64,13 @@ article {
     border-color: #065780;
     padding: 1em;
 }
-a:link {
+a:link, a:visited {
     text-decoration: none;
     color: #0C64FA;
 }
 a:hover {
     text-decoration: none;
     color: #0B557A;
-}
-a:visited {
-    text-decoration: none;
-    color: #0C64FA;
 }
 
 ul.project {
@@ -129,7 +129,7 @@ ul.projectpage {
     width: 300px;
 }
 
-.button a:link{
+.button a:link, a:visited{
 	color: #BAD0F7;
 	text-decoration: none;
 }
@@ -139,10 +139,6 @@ ul.projectpage {
 	text-decoration: none;
 }
 
-.button a:visited{
-	color: #BAD0F7;
-	text-decoration: none;
-}
 
 .center {
     text-align: center;
@@ -152,6 +148,55 @@ ul.projectpage {
 }
 .spaceholder{
 	height: 100px;
+}
+
+#manager {
+	text-color: color: #0C64FA;
+	font-weight: bold;
+}
+
+#instructions{
+	
+}
+
+#references{
+	
+}
+
+#sketch{
+	
+}
+
+#sketch ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#sketch li{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border-radius: 15px 15px 15px 15px;
+    text-align: center;
+    border: 1px;
+    border-style: dashed;
+    border-color: #065780;
+    padding: 3em;
+    margin: 2px;
+    background: #8A8F91;
+}
+
+img.sparkle{
+	float: left;
+	border: 1px;
+	border-radius: 10px 10px 10px 10px;
+	border-style: inset;
+	padding: 1px;
+	height: 100px;
+}
+
+.sparkle{
+	font-size: 10pt;
 }
 
 footer {

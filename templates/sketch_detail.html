@@ -1,5 +1,13 @@
+{% extends "base.html" %}
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 
+{% block content %}
+
+<h1>Sketch #{{ object.id_no }} in project {{ object.project }}</h1>
+<h2>created by {{ object.author }} on {{ object.created.date }}</h2>
+
+<div id="sketch">
 <h1> {{ object.title }} </h1>
 
 {% if object.project.project_type == 0 %}
@@ -29,3 +37,9 @@ body = contents.find('body')
 </div>
 
 {% endif %}
+
+</div>
+<div class="sparkle">
+	<img src="{{STATIC_URL}}/media/blue_sparkle.png">{{object.sparkles}}
+</div>
+{% endblock %}
