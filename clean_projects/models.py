@@ -11,8 +11,8 @@ class Project(models.Model):
     subject = models.ForeignKey('Subject')
     tags = TagField()
 
-    instructions = models.TextField()
-    reference = models.URLField('URL', unique=True);
+    instructions = models.TextField(help_text="Instructions for the assignment.")
+    references = models.TextField(help_text="Enter any references you would like to provide.");
 
     class Meta:
         ordering = ['-created_date']

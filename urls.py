@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
+from django.views.generic.simple import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -16,6 +17,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     
-    # serve up base page
-    url(r'^base/$', TemplateView.as_view(template_name="base.html") ),
+    url(r'^index/$', direct_to_template, {'template':'base.html'}),
 )
