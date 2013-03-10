@@ -105,18 +105,45 @@ p.fakesearch{
 	color: #C0C0CA;
 }
 
-.projectpage p{
-	text-color: #ff0000;
+p.fakefield{
+	position: relative;
+	margin-left: 25px;
+	width: 400px;
+	border: 1px;
+	border-style: dashed;
+	border-color: #065780;
+	padding: 0.2em;
+	color: #C0C0CA;
 }
 
-.important {
-    color: #BAD0F7;
+ul.projectpage {
+	list-style-type: none;
+}
+
+.button {
+    color: #BAD0E7;
     background: #8A8F91;
     padding: 0.5em;
     padding-left: 2em;
     border-radius: 15px 15px 15px 15px;
-    width: 60%;
+    width: 300px;
 }
+
+.button a:link{
+	color: #BAD0F7;
+	text-decoration: none;
+}
+
+.button a:hover{
+	color: #0B557A;
+	text-decoration: none;
+}
+
+.button a:visited{
+	color: #BAD0F7;
+	text-decoration: none;
+}
+
 .center {
     text-align: center;
     margin-left:auto;

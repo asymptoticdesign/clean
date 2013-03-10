@@ -20,7 +20,9 @@ urlpatterns = patterns('',
     url(r'^index/$', TemplateView.as_view(template_name="base.html")),
     url(r'^about/$', TemplateView.as_view(template_name="about.html")),
     url(r'^browse/$', TemplateView.as_view(template_name="browse.html")),
+    url(r'^newproject/$', TemplateView.as_view(template_name="newproject.html")),
     url(r'^projects/$',ListView.as_view(queryset=Project.objects.all(),template_name="projects.html")),
     url(r'^projects/(?P<slug>[-\w]+)/$', DetailView.as_view(model=Project, template_name="project_detail.html")),
+    url(r'^projects/sketches/(?P<slug>[-\w]+)/$', DetailView.as_view(model=Sketch, template_name="sketch_detail.html")),
 #    url('^sketches/(?P<id_no>[-\w]+)/$', 'django.views.generic.list_detail.object_detail', dict(sketch_dict, id_no='id_no'
 )

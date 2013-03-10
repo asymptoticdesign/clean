@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+<h1> {{ object.title }} </h1>
+
+{% if object.project.project_type == 0 %}
+<div class="jsfiddle_from_server">
+  <form>
+    <textarea id="code">{{ object.content|safe}}</textarea>
+  </form>
+</div>
+
+<div class="jsfiddle">
+  <iframe></iframe>
+</div>
+
+<script>
+(function() {
+var frame = $('iframe'),
+contents = frame.contents(),
+body = contents.find('body')
+
+</script>
+
+{% endif %}
+
+{% if object.project.project_type == 2 %}
+<div class="jsfiddle_from_server">
+{{ object.content|safe}}
+</div>
+
+{% endif %}
