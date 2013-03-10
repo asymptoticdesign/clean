@@ -1,45 +1,54 @@
 {% extends "base.html" %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-
 {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 
 <h1>Sketch #{{ object.id_no }} in project {{ object.project }}</h1>
 <h2>created by {{ object.author }} on {{ object.created.date }}</h2>
 
 <div id="sketch">
-<h1> {{ object.title }} </h1>
-
-{% if object.project.project_type == 0 %}
-<div class="jsfiddle_from_server">
-  <form>
-    <textarea id="code">{{ object.content|safe}}</textarea>
-  </form>
-</div>
-
-<div class="jsfiddle">
-  <iframe></iframe>
-</div>
-
-<script>
-(function() {
-var frame = $('iframe'),
-contents = frame.contents(),
-body = contents.find('body')
-
-</script>
-
-{% endif %}
-
-{% if object.project.project_type == 2 %}
-<div class="jsfiddle_from_server">
-{{ object.content|safe}}
-</div>
-
-{% endif %}
-
+  <h1> {{ object.title }} </h1>
+  
+  {% if object.project.project_type == 0 %}
+  <div class="jsfiddle_from_server">
+    <form>
+      <textarea id="code">{{ object.content|safe}}</textarea>
+    </form>
+  </div>
+  
+  <div class="jsfiddle">
+    <iframe id="iframe"></iframe>
+  </div>
+  
+  <script>
+    var iframe = document.getElementById('iframe');
+    
+    if(iframe.contentDocument) {
+        doc = iframe.contentDocument;
+    }
+    else if(iframe.contentWindow) {
+        doc = iframe.contentWindow.document;
+    }
+    else {
+        doc = iframe.document;
+    }
+    
+    doc.open();
+    doc.writeln("<scrip" + "t>" + '{{ object.content|safe }}' + "</scri" + "pt>");
+    doc.close();
+  </script>
+  
+  {% endif %}
+  
+  {% if object.project.project_type == 2 %}
+  <div class="jsfiddle_from_server">
+    {{ object.content|safe}}
+  </div>
+  
+  {% endif %}
+  
 </div>
 <div class="sparkle">
-	<img src="{{STATIC_URL}}media/sparkle_blue.png">{{object.sparkles}}
+  <img src="{{STATIC_URL}}media/sparkle_blue.png">{{object.sparkles}}
 </div>
 {% endblock %}
