@@ -6,13 +6,18 @@ body {
     margin: 0 auto 1em;
     width: 900px;
 }
+img.contained{
+
+}
 img.logo{
 	border: 1px;
 	border-radius: 10px 10px 10px 10px;
 	border-style: inset;
-	width: 100px;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 150px 0px 150px;
 	margin: 2%;
+	height: 100px;
+	width: 600px;
+
 }
 
 nav ul {
@@ -29,10 +34,10 @@ nav a:link, nav a:visited {
     display: block;
     margin: 0 auto;
     padding-bottom: 2px;
-    padding-left: 25px;
+    padding-left: 75px;
     padding-top: 2px;
     text-decoration: none;
-    width: 146px;
+    width: 220px;
     letter-spacing: 2px;
 }
 nav a:hover {
@@ -40,6 +45,7 @@ nav a:hover {
 }
 
 h1 {
+	clear: both;
     color: #063380;
 }
 h2 {
