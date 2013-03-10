@@ -3,10 +3,9 @@
 {% block content %}
 
 <article>
-	<h1>Python variable for Project title</h1>
-	<h2>PyVar for Project author</h2>
-	<p class="projectpage">
-		<ul>
+	<h1>My Projects</h1>
+	<p class="button"><a href="/newproject">Click to open a new project</a></p>
+	<ul class="projectpage">
 {% for project in object_list %}
 <li>
   <a href="{{ project.get_absolute_url }}"><h2>{{ project.title }}</h2></a>
