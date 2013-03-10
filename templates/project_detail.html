@@ -1,0 +1,8 @@
+<h1> Sketches </h1>
+<ul>
+{% for sketch in object_list %}
+<li>
+  <a href="{{ sketch.get_absolute_url }}"><h2>Sketch by {{ sketch.author }}</h2></a>
+</li>
+{% endfor %}
+</ul>

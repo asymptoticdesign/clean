@@ -6,7 +6,14 @@
 	<h1>Python variable for Project title</h1>
 	<h2>PyVar for Project author</h2>
 	<p class="projectpage">
-		Stuff
+		<ul>
+{% for project in object_list %}
+<li>
+  <a href="{{ project.get_absolute_url }}"><h2>{{ project.title }}</h2></a>
+  <p>{{ project.instructions }}</p>
+</li>
+{% endfor %}
+</ul>
 	</p>
 </article>
 
