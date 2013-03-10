@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<h1> {{ object.title }} </h1>
+<h1><span id="projectname"> {{ object.title }} </span></h1>
 
-organized by <span id="manager">{{ object.manager }}</span>
+organized by <span id="manager">{{ object.manager }} username</span>
 
 <h2>Problem statement</h2>
 <div id="instructions">
@@ -16,10 +16,10 @@ organized by <span id="manager">{{ object.manager }}</span>
 
 <h2> Sketches </h2>
 
-<ul>
+<ul class="projectpage">
 {% for sketch in object.sketch_set.all %}
-<li>
-  <a href="{{ sketch.get_absolute_url }}"><h2>{{ sketch.title }} by {{ sketch.author }}</h2></a>
+<li>  
+	<a href="{{ sketch.get_absolute_url }}">{{ sketch.title }} by {{ sketch.author }}</a>
 </li>
 {% endfor %}
 </ul>

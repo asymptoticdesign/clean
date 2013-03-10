@@ -36,6 +36,7 @@ nav a:link, nav a:visited {
     padding-bottom: 2px;
     padding-left: 75px;
     padding-top: 2px;
+    color: #0C64FA;
     text-decoration: none;
     width: 220px;
     letter-spacing: 2px;
@@ -73,6 +74,10 @@ a:hover {
     color: #0B557A;
 }
 
+.left {
+	float: left;
+}
+
 ul.project {
     list-style-type: none;
     padding: 0;
@@ -106,6 +111,7 @@ p.fakesearch{
 }
 
 p.fakefield{
+	clear: both;
 	position: relative;
 	margin-left: 25px;
 	width: 400px;
@@ -144,14 +150,19 @@ ul.projectpage {
     text-align: center;
     margin-left:auto;
 	margin-right:auto;
-	width=80%;
+	width: 80%;
 }
 .spaceholder{
 	height: 100px;
 }
 
+#projectname{
+	color: #067080;
+	font-weight: bold;
+}
+
 #manager {
-	text-color: color: #0C64FA;
+	color: #0C64FA;
 	font-weight: bold;
 }
 
@@ -163,8 +174,26 @@ ul.projectpage {
 	
 }
 
-#sketch{
-	
+#jssketch{
+	border-radius: 15px 15px 15px 15px;
+    border: 0px;
+    border-style: dashed;
+    border-color: #065780;
+    padding: 1em ;
+    background: #DAE2F0;
+    height: 400px;
+    margin: 10px auto;
+}
+
+#textsketch{
+	border-radius: 15px 15px 15px 15px;
+    border: 0px;
+    border-style: dashed;
+    border-color: #065780;
+    padding: 1em ;
+    background: #DAE2F0;
+    height: 600px;
+    margin: 10px auto;
 }
 
 #sketch ul{
@@ -187,16 +216,38 @@ ul.projectpage {
 }
 
 img.sparkle{
+	clear: both;
 	float: left;
 	border: 1px;
 	border-radius: 10px 10px 10px 10px;
 	border-style: inset;
 	padding: 1px;
-	height: 100px;
+	height: 20px;
 }
 
 .sparkle{
+	clear: both;
 	font-size: 10pt;
+}
+
+.jsfiddle{
+	float: left;
+}
+
+.jsfiddle_from_server{
+	float: left;
+}
+
+#code {
+	width: 400px;
+	height: 400px;
+	margin: auto;
+}
+
+#output {
+	width: 400px;
+	min-height: 400px;
+	margin: auto 10px;
 }
 
 footer {

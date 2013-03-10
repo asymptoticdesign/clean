@@ -4,13 +4,14 @@
 
 {% block content %}
 
-<h1>Sketch #{{ object.id_no }} in project {{ object.project }}</h1>
-<h2>created by {{ object.author }} on {{ object.created.date }}</h2>
+<h1>Sketch #{{ object.id_no }} in project <span id="projectname">{{ object.project }}</span></h1>
+<h2>created by {{ object.author }} on {{ object.created_date }}</h2>
 
-<div id="sketch">
+
 <h1> {{ object.title }} </h1>
 
 {% if object.project.project_type == 0 %}
+<div id="jssketch">
 <div class="jsfiddle_from_server">
   <form>
     <textarea id="code">{{ object.content|safe}}</textarea>
@@ -18,7 +19,7 @@
 </div>
 
 <div class="jsfiddle">
-  <iframe></iframe>
+  <iframe id="output"></iframe>
 </div>
 
 <script>
@@ -28,21 +29,22 @@ contents = frame.contents(),
 body = contents.find('body')
 
 </script>
-
+</div>
 {% endif %}
 
 {% if object.project.project_type == 2 %}
+<div id="textsketch">
 <div class="jsfiddle_from_server">
 {{ object.content|safe}}
+</div>
 </div>
 
 {% endif %}
 
-</div>
 <div class="sparkle">
-	<img src="{{STATIC_URL}}/media/sparkle_blue.png">{{object.sparkles}}
+	<img class="sparkle" src="{{STATIC_URL}}/media/sparkle_blue.png">{{object.sparkles}} sparkle points
 </div>
-<div class="fakefield">
-	Nathan, this is 
-</div>
+<p class="fakefield">
+	Comments from other participants
+</p>
 {% endblock %}
